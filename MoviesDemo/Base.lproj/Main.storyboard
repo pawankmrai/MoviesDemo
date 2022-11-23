@@ -33,10 +33,10 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieCell" id="kPG-Qe-Ne8">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieCollectionViewCell" id="kPG-Qe-Ne8" customClass="MovieCollectionViewCell" customModule="MoviesDemo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="106"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="vZO-l9-w98">
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gG8-xW-WiM">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="106"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -47,15 +47,15 @@
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="I1M-xl-QbE">
-                                                    <rect key="frame" x="116" y="36.333333333333343" width="219" height="33.666666666666657"/>
+                                                    <rect key="frame" x="116.00000000000001" y="36.333333333333343" width="214.33333333333337" height="33.666666666666657"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2008" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4u-jq-5fg">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2008" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4u-jq-5fg">
                                                             <rect key="frame" x="0.0" y="0.0" width="28" height="13.333333333333334"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Dark Night" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITD-Vf-NZm">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Dark Night" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITD-Vf-NZm">
                                                             <rect key="frame" x="0.0" y="13.333333333333327" width="115" height="20.333333333333329"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                             <nil key="textColor"/>
@@ -64,23 +64,29 @@
                                                     </subviews>
                                                 </stackView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWx-Gr-Pvs">
-                                                    <rect key="frame" x="343" y="34.666666666666664" width="41" height="36.999999999999993"/>
+                                                    <rect key="frame" x="338.33333333333331" y="34.666666666666664" width="45.666666666666686" height="36.999999999999993"/>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" image="selected"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="selected" title=" "/>
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="I1M-xl-QbE" firstAttribute="centerY" secondItem="vZO-l9-w98" secondAttribute="centerY" id="4rc-M6-Tfu"/>
+                                                <constraint firstItem="I1M-xl-QbE" firstAttribute="centerY" secondItem="gG8-xW-WiM" secondAttribute="centerY" id="4rc-M6-Tfu"/>
+                                                <constraint firstItem="TWx-Gr-Pvs" firstAttribute="leading" secondItem="I1M-xl-QbE" secondAttribute="trailing" constant="8" id="4wb-yi-XFw"/>
                                                 <constraint firstItem="I1M-xl-QbE" firstAttribute="leading" secondItem="bbx-n9-qI9" secondAttribute="trailing" constant="26" id="CBz-OC-7DQ"/>
-                                                <constraint firstItem="bbx-n9-qI9" firstAttribute="top" secondItem="vZO-l9-w98" secondAttribute="top" constant="8" id="FCO-nY-Qf7"/>
-                                                <constraint firstItem="TWx-Gr-Pvs" firstAttribute="centerY" secondItem="vZO-l9-w98" secondAttribute="centerY" id="JYg-1l-CmW"/>
+                                                <constraint firstItem="bbx-n9-qI9" firstAttribute="top" secondItem="gG8-xW-WiM" secondAttribute="top" constant="8" id="FCO-nY-Qf7"/>
+                                                <constraint firstItem="TWx-Gr-Pvs" firstAttribute="centerY" secondItem="gG8-xW-WiM" secondAttribute="centerY" id="JYg-1l-CmW"/>
                                                 <constraint firstAttribute="bottom" secondItem="bbx-n9-qI9" secondAttribute="bottom" constant="8" id="UKa-oi-3Fn"/>
-                                                <constraint firstItem="bbx-n9-qI9" firstAttribute="leading" secondItem="vZO-l9-w98" secondAttribute="leading" constant="30" id="cOK-de-Xv0"/>
+                                                <constraint firstItem="bbx-n9-qI9" firstAttribute="leading" secondItem="gG8-xW-WiM" secondAttribute="leading" constant="30" id="cOK-de-Xv0"/>
                                                 <constraint firstAttribute="trailing" secondItem="TWx-Gr-Pvs" secondAttribute="trailing" constant="30" id="ori-zu-kZR"/>
-                                                <constraint firstItem="TWx-Gr-Pvs" firstAttribute="leading" secondItem="I1M-xl-QbE" secondAttribute="trailing" constant="8" id="uSV-i7-so3"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="414" height="106"/>
+                                        <connections>
+                                            <outlet property="btnFavorite" destination="TWx-Gr-Pvs" id="y9o-5T-7Zr"/>
+                                            <outlet property="imageView" destination="bbx-n9-qI9" id="MEw-zh-uNP"/>
+                                            <outlet property="lblTitle" destination="ITD-Vf-NZm" id="eO4-IQ-TAo"/>
+                                            <outlet property="lblYear" destination="x4u-jq-5fg" id="Zkx-fG-k5u"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
